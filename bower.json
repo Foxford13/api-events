@@ -1,0 +1,20 @@
+{
+  "name": "vue-app",
+  "description": "vue-app",
+  "main": "index.js",
+  "authors": [
+    "Jakub Dziekan <jakubdziek@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+
+  }
+}
