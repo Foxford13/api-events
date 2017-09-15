@@ -51,7 +51,12 @@
     }
   },
   "dependencies": {
-    "express": "^4.14.0"
+    "bluebird": "^3.5.0",
+    "body-parser": "^1.18.1",
+    "bower": "^1.8.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.11.11",
+    "morgan": "^1.8.2"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
