@@ -13,20 +13,26 @@ Event.collection.drop();
 
 const eventData = [{
   title: 'Awesome event',
-  dateFrom: 10/10/2010,
-  dateTo: 13/10/2010,
+  dateFrom: '2016-08-11',
+  dateTo: '2016-08-11',
   location: 'Lodon',
   description: 'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum'
 },{
   title: 'Awesome event',
-  dateFrom: 10/12/2010,
-  dateTo: 12/12/2018,
+  dateFrom: '2016-08-11',
+  dateTo: '2016-08-11',
   location: 'Lodon',
   description: 'lorem ipsumwqeqeqeqweqwelorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum'
 },{
+  title: 'Bday',
+  dateFrom: '2016-08-11',
+  dateTo: '2016-08-11',
+  location: 'Neverland',
+  description: 'lorem ipsumwqeqeqeqweqwelorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum'
+},{
   title: 'Awesomesdadasdasd',
-  dateFrom: 12/10/2010,
-  dateTo: 13/12/2010,
+  dateFrom: '2016-08-11',
+  dateTo: '2016-08-11',
   location: 'Warsaw',
   description: 'lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum'
 }];

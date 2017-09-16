@@ -6,6 +6,11 @@ router.route('/events')
 .get(eventsController.index)
 .post(eventsController.create);
 
+router.route('/events/:id')
+.get(eventsController.show)
+.put(eventsController.update)
+.delete(eventsController.delete);
+
 
 
 
