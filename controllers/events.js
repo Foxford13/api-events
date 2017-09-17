@@ -23,7 +23,6 @@ function eventShow(req, res, next) {
   .catch(next);
 }
 
-////this update may cause trouble
 function eventUpdate(req, res, next) {
   Event
   .findById(req.params.id)
