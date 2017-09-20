@@ -1,6 +1,7 @@
 const router           = require('express').Router();
 const eventsController = require('../controllers/events');
 const auth             = require('../controllers/auth');
+const users            = require('../controllers/users');
 const secureRoute      = require('../lib/secureRoute');
 
 router.route('/events')
@@ -18,6 +19,10 @@ router.route('/register')
 router.route('/login')
   .post(auth.login);
 
+router.route('/users/:id')
+ .get(users.show)
+ .put(users.update)
+ .delete(users.delete);
 
 
 router.all('/*', (req, res) => res.notFound());

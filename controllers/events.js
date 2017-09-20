@@ -9,6 +9,8 @@ function eventIndex(req, res, next) {
 }
 
 function eventCreate(req, res, next) {
+
+  req.body.createdBy = req.user;
   Event
   .create(req.body)
   .then((event) => res.status(201).json(event))
@@ -18,6 +20,7 @@ function eventCreate(req, res, next) {
 function eventShow(req, res, next) {
   Event
   .findById(req.params.id)
+  .populate('comments.createdBy createdBy')
   .exec()
   .then(event => res.status(201).json(event))
   .catch(next);

@@ -15,15 +15,21 @@ function register(req, res, next) {
 
 function login(req, res, next) {
   User
-  .findOne({ email: req.body.email })
-  .then((user) => {
-    if(!user || !user.validatePassword(req.body.password)) return res.unauthorized();
-    const token = jwt.sign({ userId: user.id }, secret, { expiresIn: '1hr' });
-    return res.json({ token, message: `Welcome back ${user.username}`});
+  .findOne({ email: req.body.email }, (err, user) => {
+    if (err) res.send(500).json(err);
+    if (!user || !user.validatePassword(req.body.password)) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+    const payload = { userId: user.id };
+    const token = jwt.sign(payload, secret, { expiresIn: 60*60*24 });
+    console.log('TOKEN:', token);
+    return res.status(200).json({
+
+      token
+    });
   })
   .catch(next);
 }
-
 
 module.exports = {
   register,
