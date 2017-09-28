@@ -22,7 +22,7 @@ userSchema.pre('validate', function checkPassword(next) {
 
 userSchema.pre('save', function hashPassword(next) {
   if(this.isModified('password')) {
-    this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync(8));
+    this.password = bcrypt.hash(this.password, bcrypt.genSalt(8));
   }
   next();
 });

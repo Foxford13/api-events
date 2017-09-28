@@ -7,7 +7,7 @@ mongoose.Promise          = require('bluebird');
 const morgan              = require('morgan');
 const bodyParser          = require('body-parser');
 const router              = require('./config/routes');
-const cors                 = require('cors');
+const cors                = require('cors');
 
 mongoose.connect(dbURI);
 

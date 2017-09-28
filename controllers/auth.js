@@ -4,8 +4,21 @@ const jwt         = require('jsonwebtoken');
 
 
 function register(req, res, next) {
+  // User
+  // .create(req.body)
+  // .then(() => {
+  //   return res.json({ message: 'Success!'});
+  // })
+  // .catch(next);
+  //
+
+
   User
-  .create(req.body)
+  .create(req.body, (err) => {
+    if (err) return res.status(400).json(err);
+
+    return res.status(200).json({ message: 'Thanks for registering!' });
+  })
   .then(() => {
     return res.json({ message: 'Success!'});
   })
